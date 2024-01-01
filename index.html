@@ -1,0 +1,39 @@
+<!--create a rotating wheel effect using HTML and CSS-->>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .wheel {
+      width: 200px;
+      height: 200px;
+      background: conic-gradient(
+        #f00 0% 25%,
+        rgb(0, 212, 42) 25% 50%,
+        #00f 50% 75%, 
+        rgb(255, 179, 0) 75% 100% 
+      );
+      cursor: pointer;
+      transition: 5s;
+      border-radius: 50%; 
+    }
+
+    .wheel:hover {
+      transform: rotate(360deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="wheel"></div>
+  </div>
+</body>
+</html>
